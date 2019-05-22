@@ -58,7 +58,7 @@ public class AutopistaAviones extends JFrame {
 		super.paint(g);
 		g.drawImage(imgAeropuerto.getImage(), 0, 0, getWidth(), getHeight()-30, this);
 		Image img;
-		String texto = "";
+		String texto = "  INTENTOS ->";
 		for (int i = 0; i < aviones.length; i++) {
 			texto += "        Avion #" + (i+1) + ": " + aviones[i].getNoIntentos();
 			if(aviones[i].getDireccion())
@@ -70,9 +70,5 @@ public class AutopistaAviones extends JFrame {
 		g.setFont(new Font("Calibri", Font.BOLD, 20));
 		g.drawString(texto, 0, 890);
 		repaint();
-	}
-	
-	public static void main(String [] args) {
-		new AutopistaAviones();
 	}
 }
